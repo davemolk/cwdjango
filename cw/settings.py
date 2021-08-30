@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     
     'user.apps.UserConfig',
     'katas.apps.KatasConfig',
+
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
