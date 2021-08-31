@@ -119,7 +119,7 @@ def delete_kata(request, pk):
 
 
 @login_required(login_url="login")
-def deleteTag(request, pk):
+def delete_tag(request, pk):
     profile = request.user.profile
     tag = profile.tag_set.get(id=pk)
 

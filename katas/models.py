@@ -38,7 +38,7 @@ class Exercise(models.Model):
     cwID = models.CharField(max_length=200)
     description = models.TextField(max_length=300, blank=True, null=True)
     language = models.CharField(max_length=100, choices=language, default=JavaScript)
-    tags = models.ManyToManyField('Tag', bland=True)
+    tags = models.ManyToManyField('Tag', blank=True)
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
 
