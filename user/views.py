@@ -17,37 +17,37 @@ def about(request):
     return render(request, 'about.html')
 
 
-def login(request):
-    if request.user.is_authenticated():
+def login_user(request):
+    if request.user.is_authenticated:
         return redirect('index')
     
     if request.method == 'POST':
         username = request.POST['username']
-        email = request.POST['email']
+        password = request.POST['password']
 
         try:
             user = User.objects.get(username=username)
         except:
             messages.error(request, "Username does not exist")
 
-        user = authenticate(request, username=username, email=email)
+        user = authenticate(request, username=username, password=password)
         
         if user is not None:
             login(request, user)
-            return redirect ('index')
+            return redirect('index')
         else:
             messages.error(request, 'Username OR password is incorrect')
     
     return render(request, 'user/login.html')
 
 
-def logout(request):
+def logout_user(request):
     logout(request)
     messages.success(request, 'Good work on the battlefield today')
     return redirect('index')
 
 
-def signup(request):
+def signup_user(request):
     form = CustomUserCreationForm()
 
     if request.method == 'POST':

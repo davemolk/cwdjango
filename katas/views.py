@@ -10,23 +10,24 @@ from django.urls import reverse_lazy, reverse
 
 # Create your views here.
 
+
 def katas(request):
     return render(request, 'katas/katas.html')
 
 @login_required(login_url="login")
 def my_katas(request):
     exercises, search_query = search_katas(request)
-    Csharp = exercises.filter(type='C#')
-    Cplus = exercises.filter(type='C++')
-    Go = exercises.filter(type='Go')
-    Java = exercises.filter(type='Java')
-    JavaScript = exercises.filter(type='JavaScript')
-    php = exercises.filter(type='php')
-    Python = exercises.filter(type='Python')
-    Ruby = exercises.filter(type='Ruby')
-    Rust = exercises.filter(type='Rust')
-    Scala = exercises.filter(type='Scala')
-    TypeScript = exercises.filter(type='TypeScript')
+    Csharp = exercises.filter(language='C#')
+    Cplus = exercises.filter(language='C++')
+    Go = exercises.filter(language='Go')
+    Java = exercises.filter(language='Java')
+    JavaScript = exercises.filter(language='JavaScript')
+    php = exercises.filter(language='php')
+    Python = exercises.filter(language='Python')
+    Ruby = exercises.filter(language='Ruby')
+    Rust = exercises.filter(language='Rust')
+    Scala = exercises.filter(language='Scala')
+    TypeScript = exercises.filter(language='TypeScript')
     
     context = {
         'C#': Csharp, 

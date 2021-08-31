@@ -6,14 +6,14 @@
         <a class="navbar-brand" href="/">
         {% if request.user.is_authenticated %}
         <span class="nav-text fw-bold">
-            {{request.user.profile.username}}'s Closet Companion
+            {{request.user.profile.username}}'s Codewar Companion
         </span>
         </a>
         
         {% else %}
         <a class="navbar-brand" href="/">
         <span class="nav-text fw-bold">
-            Closet Companion
+            Codewar Companion
         </span>
         </a> 
         {% endif %}
@@ -29,24 +29,19 @@
         <ul class="navbar-nav">
            
             <li class="nav-item">
-            <a class="nav-link nav-text fw-bold" href="{% url 'katas' %}">Katas</a></span>
+            <a class="nav-link nav-text fw-bold" href="{% url 'katas' %}">Get Katas</a></span>
             </li>
 
             <li class="nav-item">
-            <a class="nav-link nav-text fw-bold" href="{% url 'tags' %}">Tags</a></span>
+            <a class="nav-link nav-text fw-bold" href="{% url 'my-katas' %}">Saved Katas</a></span>
             </li>
-
+            
             <li class="nav-item d-md-none">
             <a class="nav-link nav-text fw-bold" href="#">Add Kata</a>
             </li>
+
             <li class="nav-item d-none d-md-inline">
             <a class="nav-link nav-text fw-bold" href="{% url 'create-kata' %}">Add Kata</a>
-            </li>  
-            <li class="nav-item d-md-none">
-            <a class="nav-link nav-text fw-bold" href="#">Add Tag</a>
-            </li>
-            <li class="nav-item d-none d-md-inline">
-            <a class="nav-link nav-text fw-bold" href="{% url 'create-tag' %}">Add Tag</a>
             </li>  
             
             <li class="nav-item">
