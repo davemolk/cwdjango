@@ -1,0 +1,67 @@
+{% extends 'main.html'%}
+
+{% block content %}
+<div class="container=">
+    <div class="row">
+    <h1 class="display-4 mb-4 text-center">Choose Your Language</h1>
+        <div class="col-xs-6 col-sm-4" data-aos="fade-left" data-aos-delay="300">
+            {% comment %} <div class="row" data-aos="fade-left" data-aos-delay="300"> {% endcomment %}
+                <div>
+                    <button class="btn btn-lg" id="getC#"><i class="devicon-csharp-plain"></i><span class="ml-4">C#</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getC++"><i class="devicon-cplusplus-plain"></i><span class="ml-4">C++</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getGo"><i class="devicon-go-plain"></i><span class="ml-4">Go</span></button>
+                </div>
+            {% comment %} </div> {% endcomment %}
+        </div>
+
+        <div class="col-xs-6 col-sm-4" data-aos="fade-right" data-aos-delay="450">
+            {% comment %} <div class="row" data-aos="fade-right" data-aos-delay="450"> {% endcomment %}
+                <div>
+                    <button class="btn btn-lg" id="getJava"><i class="devicon-java-plain"></i><span class="ml-4">Java</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getJavaScript"><i class="devicon-javascript-plain"></i><span class="ml-4">JavaScript</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getPHP"><i class="devicon-php-plain"></i><span class="ml-4">PHP</span></button>
+                </div>
+            {% comment %} </div> {% endcomment %}
+        </div>
+
+        <div class="col-xs-6 col-sm-4" data-aos="fade-left" data-aos-delay="600">
+            {% comment %} <div class="row" data-aos="fade-left" data-aos-delay="600"> {% endcomment %}
+                <div>
+                    <button class="btn btn-lg" id="getPython"><i class="devicon-python-plain"></i><span class="ml-4">Python</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getRuby"><i class="devicon-ruby-plain"></i><span class="ml-4">Ruby</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getRust"><i class="devicon-rust-plain"></i><span class="ml-4">Rust</span></button>
+                </div>	
+            {% comment %} </div> {% endcomment %}
+        </div>
+
+        <div class="col-xs-6 col-sm-4" data-aos="fade-left" data-aos-delay="750">
+            {% comment %} <div class="row" data-aos="fade-left" data-aos-delay="750"> {% endcomment %}
+                <div>
+                    <button class="btn btn-lg" id="getScala"><i class="devicon-scala-plain"></i><span class="ml-4">Scala</span></button>
+                </div>
+                <div>
+                    <button class="btn btn-lg" id="getTypeScript"><i class="devicon-typescript-plain"></i><span class="ml-4">TypeScript</span></button>
+                </div>
+            {% comment %} </div> {% endcomment %}
+                
+        </div>
+
+        <h1 class="display-4 mb-4 text-center">Output</h1>
+
+        <div class="text-center" id="output"></div>
+    </div>
+</div>
+
+{% endblock %}

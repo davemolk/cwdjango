@@ -11,3 +11,19 @@ body {
     background-size: cover;
     background-image: url(/images/background.jpg);
 }
+
+div[class^="devicon"] {
+	display: block;
+	color: #333333;
+	font-size: 80px;
+    margin:  2vh auto 2vh auto;
+	text-align: center;
+}
+
+div[class^="devicon"] span{
+	font-family: Raleway, sans-serif;
+	font-weight: 600;
+	margin-top: 10px;
+	font-size: 16px;
+	display:block;
+}

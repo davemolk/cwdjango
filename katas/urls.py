@@ -2,7 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('katas/', views.katas, name='katas'),
+    path('', views.katas, name='katas'),
+    path('my_katas/', views.my_katas, name='my-katas'),
     path('kata/<str:pk>/', views.kata, name='kata'),
     path('create-kata/', views.create_kata, name='create-kata'),
     path('update-kata/<str:pk>/', views.update_kata, name='update-kata'),
