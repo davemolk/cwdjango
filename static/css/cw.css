@@ -1,0 +1,13 @@
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    min-height: 100%;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(/images/background.jpg);
+}

@@ -13,19 +13,7 @@ def createProfile(sender, instance, created, **kwargs):
             email=user.email
         )
         
-        subject = 'Welcome to Codewars Companion!'
-        message = "Happy Practicing!"
-
-        send_mail(
-            subject,
-            message,
-            settings.EMAIL_HOST_USER,
-            [profile.email],
-            fail_silently=False,
-        )
-
-
-
+        
 def updateUser(sender, instance, created, **kwargs):
     profile = instance
     user = profile.user
